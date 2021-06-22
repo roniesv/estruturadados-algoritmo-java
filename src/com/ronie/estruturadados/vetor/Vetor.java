@@ -1,5 +1,7 @@
 package com.ronie.estruturadados.vetor;
 
+import java.util.Arrays;
+
 public class Vetor {
 	
 	private String[] elementos;
@@ -40,4 +42,43 @@ public class Vetor {
 		 return false;
 		 //vamos que vamos
 	}
+	
+	public int getTamanho() {
+		return this.tamanho;
+	}
+
+
+	@Override
+	public String toString() {
+		StringBuilder s =  new StringBuilder();
+		s.append("[");
+		
+		for (int i=0; i<this.tamanho-1; i++) {
+			s.append(this.elementos[i]);
+			s.append(", ");
+		}
+		if (this.tamanho>0) {
+			s.append(this.elementos[tamanho-1]);
+		}
+		s.append("]");
+		
+		
+		return s.toString();
+	}
+
+
+	/*
+	 * @Override public String toString() {
+	 * 
+	 * String s = "["; for (int i=0; i<this.tamanho-1; i++) { s +=
+	 * this.elementos[i]; s += ", "; } if(this.tamanho>0) { s +=
+	 * this.elementos[this.tamanho-1];
+	 * 
+	 * } s+= "]"; //return Arrays.toString(elementos); return s; }
+	 */
+	
+	
+	
+	
+	 
 }
