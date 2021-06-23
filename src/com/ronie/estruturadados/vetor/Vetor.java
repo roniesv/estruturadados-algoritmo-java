@@ -26,7 +26,7 @@ public class Vetor {
 			 this.elementos[this.tamanho] = elemento;
 			 this.tamanho++;
 		 }else {
-			throw new Exception("Vetor já está cheio, não é possível adicionar mais elementos"); 
+			throw new Exception("Vetor jï¿½ estï¿½ cheio, nï¿½o ï¿½ possï¿½vel adicionar mais elementos"); 
 		 } 
 		 
 	 }*/
@@ -45,6 +45,14 @@ public class Vetor {
 	
 	public int getTamanho() {
 		return this.tamanho;
+	}
+	
+	public String busca(int posicao) {
+		
+		if(!(posicao >=0 && posicao<tamanho)){
+		   throw new IllegalArgumentException("PosiÃ§Ã£o invÃ¡lida");
+		}
+		return this.elementos[posicao];
 	}
 
 
